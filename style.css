@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box;
+    font-family: "Rubik";
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 0%;
+    left: 40%;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    background-color: hsl(226, 43%, 10%);
+    color: white;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.item1 {
+
+    grid-row: span 2;
+
+}
+
+.item1 img {
+    width: 70px;
+    border: 3px solid white;
+    border-radius: 50px;
+    transition: 1s ease-in-out;
+    transition-duration: 5s;
+}
+
+.item1 img:hover {
+    scale: 2;
+    rotate: 360deg;
+}
+
+main {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6,
+.item7 {
+    border-radius: 15px;
+}
+
+.item2 {
+    background-image: url("images/icon-work.svg");
+    background-color: hsl(15, 100%, 70%);
+}
+
+.item3 {
+    background-image: url("images/icon-play.svg");
+    background-color: hsl(195, 74%, 62%);
+}
+
+.item4 {
+    background-color: hsl(348, 100%, 68%);
+    background-image: url("images/icon-study.svg");
+}
+
+.item5 {
+    background-color: hsl(145, 58%, 55%);
+    background-image: url("images/icon-exercise.svg");
+}
+
+.item6 {
+    background-color: hsl(264, 64%, 52%);
+    background-image: url("images/icon-social.svg");
+}
+
+.item7 {
+    background-color: hsl(43, 84%, 65%);
+    background-image: url("images/icon-self-care.svg");
+
+}
+
+.item2 :hover,
+.item3 :hover,
+.item4 :hover,
+.item5 :hover,
+.item6 :hover,
+.item7 :hover {
+    background-color: hsl(237, 37%, 29%);
+
+}
+
+.sous_item2,
+.sous_item3,
+.sous_item4,
+.sous_item5,
+.sous_item6,
+.sous_item7 {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+    padding: 1em;
+    margin-top: 2.5em;
+    height: 86%;
+}
+
+.sous_item1 a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.5;
+    transition: 5s cubic-bezier(.39, .58, 0, 2.52);
+}
+
+.sous_item1 a:hover {
+    opacity: 1;
+}
+
+.sous_item1 a:focus {
+    opacity: 1;
+}
+
+.point {
+    color: white;
+    opacity: 0.7;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.point:hover {
+    opacity: 1;
+    scale: 2;
+}
+
+h4 {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+.last {
+    opacity: 0.5;
+    font-size: small;
+}
+
+
+.sous_item span {
+    opacity: 0.5;
+    font-size: small;
+    font-weight: 500;
+}
+
+.item1 {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+    padding: 1.5em;
+    position: relative;
+
+}
+
+.sous_item {
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 15px;
+    padding: 1.3em 1em 1em 0.7em;
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65%;
+    font-size: 2em;
+    font-weight: 200;
+}
+
+.sous_item1 {
+    position: absolute;
+    top: 75%;
+}
+
+.sous_item1 div {
+    padding-bottom: 0.5em;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 15px;
+    padding: 1em;
+}
+
+.croissant,
+.decroissant {
+    padding: 1em 2em 1em 2em;
+    border-radius: 50px;
+    background-color: hsl(235, 46%, 20%);
+    color: white;
+    transition: 1s ease-in-out;
+
+}
+
+.croissant:hover,
+.decroissant:hover {
+    scale: 1.2;
+}
+
+@media screen and (max-width:500px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr);
+    }
+
+    main {
+        width: 80%;
+        margin: auto;
+        position: relative;
+        top: 0%;
+        left: 0%;
+        transform: none;
+    }
+
+    .attribution {
+        position: relative;
+        bottom: 0%;
+        left: 0%;
+    }
+
+    .sous_item {
+        display: flex;
+        font-size: 1.6em;
+        justify-content: space-between;
+        padding: 1em;
+        height: 60%;
+    }
+
+    .sous_item1 {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .item1 {
+
+        grid-row: span 1;
+
+    }
+
+    .button {
+        display: block;
+        align-content: center;
+
+    }
+
+    .croissant,
+    .decroissant {
+        margin-top: 1em;
+
+    }
+
+    .sous_item2,
+    .sous_item3,
+    .sous_item4,
+    .sous_item5,
+    .sous_item6,
+    .sous_item7 {
+        padding: 2em;
+        height: 87%;
+    }
+
+}
+
+@media screen and (min-width:500px) and (max-width:1300px) {
+    main {
+        width: 100%;
+        margin: auto;
+        position: relative;
+        top: 0%;
+        left: 0%;
+        transform: none;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    .sous_item {
+        font-size: 1.3em;
+
+    }
+
+    .sous_item1 {
+        align-items: center;
+    }
+
+    .item1 {
+        padding: 1em;
+    }
+
+
+}
